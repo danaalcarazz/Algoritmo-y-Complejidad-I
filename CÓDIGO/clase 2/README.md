@@ -38,23 +38,21 @@ La creación de cada pila se realiza mediante el constructor de la clase.
 
 * Implementación mediante arreglo dinámico
 
-La clase PilaArreglo representa la pila utilizando un arreglo dinámico.
+La clase PilaArreglo representa la pila utilizando un arreglo dinámico simulado mediante una lista de tamaño fijo.
 
 
 
 La estructura posee dos atributos internos:
 
-\- \_\_datos: almacena los elementos de la pila.
+\- \_\_capacidad: almacena el tamaño máximo actual del arreglo.
 
-\- \_\_tope: indica la posición del último elemento almacenado.
+\- \_\_datos: arreglo de tamaño fijo que almacena los elementos.
+
+\- \_\_tope: indica el índice del último elemento almacenado.
 
 
 
-Cuando la pila está vacía, el valor de \_\_tope es -1.
-
-Al realizar apilar(), el elemento se agrega al arreglo y se actualiza el índice del tope.
-
-Al realizar desapilar(), se obtiene el elemento ubicado en el tope, se elimina del arreglo y se actualiza el índice.
+Cuando la pila se crea, se asigna una capacidad inicial (10 por defecto) y \_\_tope inicia en -1. Al realizar apilar(), si el arreglo alcanza su capacidad máxima, un método privado \_\_redimensionar duplica la capacidad del arreglo y copia los elementos existentes. Al realizar desapilar(), se obtiene el elemento en \_\_tope, se limpia esa posición reasignando None y se decrementa el índice.
 
 
 
