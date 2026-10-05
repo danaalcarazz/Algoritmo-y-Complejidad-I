@@ -47,8 +47,7 @@ def merge(izquierda, derecha):
     return resultado
 
 
-#arreglo de ejemplo
-numeros = [8, 3, 5, 4, 7, 6, 1, 2]
+numeros = [8, 3, 1, 7]
 
 #se aplica el algoritmo mergesort
 resultado = merge_sort(numeros)
